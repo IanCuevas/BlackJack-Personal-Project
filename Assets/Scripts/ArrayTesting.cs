@@ -21,14 +21,16 @@ public class ArrayTesting : MonoBehaviour
     private Label cardText;
     private Button randomCard;
 
-    int numberOfCards = 52;
+    int numberOfCards = 51;
 
     //Card Generating Lists
-    List<string> valueStrings = new List<string> {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "Queen", "King"}; 
+    List<string> valueStrings = new List<string> {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"}; 
 
     List<string> suitStrings = new List<string> {"Spades", "Clubs", "Hearts", "Diamonds"}; 
 
-    List<string> deckOfCards = new List<string> {};
+    [SerializeField] List<string> deckOfCards = new List<string> {};
+
+    [SerializeField] List<string> discardedCards = new List<string> {};
 
 
     void OnEnable()
@@ -64,13 +66,23 @@ public class ArrayTesting : MonoBehaviour
         deckOfCards = deckOfCards.Randomize().ToList();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public void RandomCardPick()
     {
-        cardText.text = deckOfCards[UnityEngine.Random.Range(0, numberOfCards)]; 
+        if(deckOfCards.Count == 0)
+        {
+            deckOfCards.AddRange(discardedCards);
+            discardedCards.Clear();
+            numberOfCards = 51;
+        }
+
+        int randomNumber = UnityEngine.Random.Range(0, numberOfCards);
+
+        cardText.text = deckOfCards[randomNumber];
+
+        discardedCards.Add(deckOfCards[randomNumber]);
+        deckOfCards.Remove(deckOfCards[randomNumber]);
+        
+        numberOfCards--;
+        print(numberOfCards);
     }
 }
