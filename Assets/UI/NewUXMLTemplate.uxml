@@ -1,7 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Button text="Button"/>
-        <ui:Label text="Label"/>
+    <ui:VisualElement style="flex-grow: 1; opacity: 1;">
+        <ui:Label text="Label" name="Card-Name" style="height: 200px; width: 500px; flex-direction: column; justify-content: flex-start; align-self: center; align-content: flex-start; align-items: stretch; top: 25%; font-size: 50px; -unity-text-align: middle-center; -unity-font-style: bold;"/>
+        <ui:Button text="Randomizer" name="Randomizer" style="align-self: center; top: 25%; width: 350px; height: 200px; font-size: 50px; -unity-font-style: bold;"/>
     </ui:VisualElement>
-    <ui:Label text="Label"/>
 </ui:UXML>
