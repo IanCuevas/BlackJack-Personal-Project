@@ -21,9 +21,10 @@ public class ArrayTesting : MonoBehaviour
     private Label cardText;
     private Button randomCard;
 
-    int numberOfCards = 51;
-
     //Card Generating Lists
+
+    int shoeDeck = 4;
+
     List<string> valueStrings = new List<string> {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"}; 
 
     List<string> suitStrings = new List<string> {"Spades", "Clubs", "Hearts", "Diamonds"}; 
@@ -49,17 +50,24 @@ public class ArrayTesting : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for(int i = 0; i < valueStrings.Count; i++)
+        for(int b = 0; b < shoeDeck; b++)
         {
-            int valueStringsIndex = i;
-
-            for(int j = 0; j < suitStrings.Count; j++)
+            for(int i = 0; i < valueStrings.Count; i++)
             {
-                if(j == suitStrings.Count)
+                int valueStringsIndex = i;
+                if(i == valueStrings.Count)
                 {
-                    j = 0;
+                    i = 0;
                 }
-                deckOfCards.Add($"{valueStrings[valueStringsIndex]} Of {suitStrings[j]}");
+
+                for(int j = 0; j < suitStrings.Count; j++)
+                {
+                    if(j == suitStrings.Count)
+                    {
+                        j = 0;
+                    }
+                    deckOfCards.Add($"{valueStrings[valueStringsIndex]} Of {suitStrings[j]}");
+                }
             }
         }
 
@@ -72,17 +80,15 @@ public class ArrayTesting : MonoBehaviour
         {
             deckOfCards.AddRange(discardedCards);
             discardedCards.Clear();
-            numberOfCards = 51;
         }
 
-        int randomNumber = UnityEngine.Random.Range(0, numberOfCards);
+        int randomNumber = UnityEngine.Random.Range(0, deckOfCards.Count - 1);
 
         cardText.text = deckOfCards[randomNumber];
 
         discardedCards.Add(deckOfCards[randomNumber]);
         deckOfCards.Remove(deckOfCards[randomNumber]);
         
-        numberOfCards--;
-        print(numberOfCards);
+        print(deckOfCards.Count);
     }
 }
