@@ -18,8 +18,7 @@ public static class CollectionExtensions
 public class ArrayTesting : MonoBehaviour
 {
     //UI
-    private Label cardText;
-    private Button randomCard;
+    private Button dealCards;
 
     //Card Generating Lists
 
@@ -27,23 +26,31 @@ public class ArrayTesting : MonoBehaviour
 
     List<string> valueStrings = new List<string> {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"}; 
 
-    List<string> suitStrings = new List<string> {"Spades", "Clubs", "Hearts", "Diamonds"}; 
+    List<string> suitStrings = new List<string> {"Spades", "Clubs", "Hearts", "Diamonds"};
 
     [SerializeField] List<string> deckOfCards = new List<string> {};
 
     [SerializeField] List<string> discardedCards = new List<string> {};
+
+    //Card Dealing
+
+    [SerializeField] List<Label> cardLabels = new List<Label> {};
 
 
     void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
-        cardText = root.Q<Label>("Card-Name");
-        randomCard = root.Q<Button>("Randomizer");
+        cardLabels.Add(root.Q<Label>("Player-Card-One"));
+        cardLabels.Add(root.Q<Label>("Dealer-Card-One"));
+        cardLabels.Add(root.Q<Label>("Player-Card-Two"));
+        cardLabels.Add(root.Q<Label>("Dealer-Card-Two"));
 
-        if (randomCard != null)
+        dealCards = root.Q<Button>("Randomizer");
+
+        if (dealCards != null)
         {
-            randomCard.clicked += RandomCardPick;
+            dealCards.clicked += DealCards;
         }
     }
 
@@ -74,7 +81,7 @@ public class ArrayTesting : MonoBehaviour
         deckOfCards = deckOfCards.Randomize().ToList();
     }
 
-    public void RandomCardPick()
+    public void DealCards()
     {
         if(deckOfCards.Count == 0)
         {
@@ -82,12 +89,15 @@ public class ArrayTesting : MonoBehaviour
             discardedCards.Clear();
         }
 
-        int randomNumber = UnityEngine.Random.Range(0, deckOfCards.Count - 1);
+        int currentIndexCard = deckOfCards.Count - deckOfCards.Count;
 
-        cardText.text = deckOfCards[randomNumber];
+        foreach(Label card in cardLabels)
+        {
+            card.text = deckOfCards[currentIndexCard];
 
-        discardedCards.Add(deckOfCards[randomNumber]);
-        deckOfCards.Remove(deckOfCards[randomNumber]);
+            discardedCards.Add(deckOfCards[currentIndexCard]);
+            deckOfCards.Remove(deckOfCards[currentIndexCard]);
+        }
         
         print(deckOfCards.Count);
     }
