@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using UnityEngine.UIElements;
+using System.Collections;
 
 // Randomizer Code
 // Analyze code later
@@ -33,6 +34,8 @@ public class ArrayTesting : MonoBehaviour
     [SerializeField] List<string> discardedCards = new List<string> {};
 
     //Card Dealing
+
+    float delay = 1.0f;
 
     [SerializeField] List<Label> cardLabels = new List<Label> {};
 
@@ -79,26 +82,31 @@ public class ArrayTesting : MonoBehaviour
         }
 
         deckOfCards = deckOfCards.Randomize().ToList();
+
     }
 
     public void DealCards()
     {
-        if(deckOfCards.Count == 0)
+        if (deckOfCards.Count == 0)
         {
             deckOfCards.AddRange(discardedCards);
             discardedCards.Clear();
         }
 
-        int currentIndexCard = deckOfCards.Count - deckOfCards.Count;
+        StartCoroutine(SetCardValue(0));
+    }
 
-        foreach(Label card in cardLabels)
+    IEnumerator SetCardValue(int indexCard)
+    {
+        foreach (Label card in cardLabels)
         {
-            card.text = deckOfCards[currentIndexCard];
+            card.text = deckOfCards[indexCard];
 
-            discardedCards.Add(deckOfCards[currentIndexCard]);
-            deckOfCards.Remove(deckOfCards[currentIndexCard]);
+            discardedCards.Add(deckOfCards[indexCard]);
+            deckOfCards.Remove(deckOfCards[indexCard]);
+
+            yield return new WaitForSeconds(delay);
         }
-        
-        print(deckOfCards.Count);
     }
 }
+
