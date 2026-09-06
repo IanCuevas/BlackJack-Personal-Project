@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9f9c0aef11000f48aa7b7e00e12152c
+guid: 723002edf1edec74d9e6bc5af63b40b3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -127,7 +127,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: ace-of-diamonds
+  - name: three-of-hearts
     originalName: 
     pivot: {x: 0.5, y: 0}
     alignment: 9
@@ -139,7 +139,7 @@ ScriptedImporter:
       y: 4
       width: 36
       height: 64
-    spriteID: 409b32ec6e97c1a4db59b193dd3dadea
+    spriteID: 6acfefec83f7952409c35097998ac779
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -153,17 +153,17 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 956460777
+      value0: 846277526
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: ace-of-diamonds
+    name: three-of-hearts
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: ace-of-diamonds
+    - name: three-of-hearts
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -171,7 +171,7 @@ ScriptedImporter:
         y: 0
         width: 36
         height: 64
-      spriteId: 409b32ec6e97c1a4db59b193dd3dadea
+      spriteId: 6acfefec83f7952409c35097998ac779
     linkedCells: []
     tileCells: []
     tileSetIndex: 0

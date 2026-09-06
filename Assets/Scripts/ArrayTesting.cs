@@ -39,7 +39,6 @@ public class ArrayTesting : MonoBehaviour
 
     [SerializeField] List<Label> cardLabels = new List<Label> {};
 
-
     void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
