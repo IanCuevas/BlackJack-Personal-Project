@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b9baa7bb16acd4586e9b3302738c32, type: 3}
   m_Name: king-of-diamonds
   m_EditorClassIdentifier: Assembly-CSharp::CardValue
-  cardValue: 0
+  cardSprite: {fileID: -4202005402415400262, guid: 310fa43d4ccd5024bb85767e309eda0b, type: 3}
+  cardValue: 10

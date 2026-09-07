@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b9baa7bb16acd4586e9b3302738c32, type: 3}
   m_Name: six-of-diamonds
   m_EditorClassIdentifier: Assembly-CSharp::CardValue
-  cardValue: 0
+  cardSprite: {fileID: -7768232947208624430, guid: 20a9fbea0792f2449b27ad82aa62671e, type: 3}
+  cardValue: 6

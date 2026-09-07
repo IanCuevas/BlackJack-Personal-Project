@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b9baa7bb16acd4586e9b3302738c32, type: 3}
   m_Name: jack-of-diamonds
   m_EditorClassIdentifier: Assembly-CSharp::CardValue
-  cardValue: 0
+  cardSprite: {fileID: 8895019289325207276, guid: a9b9f7f70efd27b4bbf7eb62b9189b5b, type: 3}
+  cardValue: 10

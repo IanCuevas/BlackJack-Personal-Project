@@ -1,12 +1,12 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; opacity: 1; align-items: stretch; flex-direction: column; flex-wrap: wrap-reverse; align-self: center;">
         <ui:VisualElement name="Dealer-Hand" style="flex-grow: 1; flex-direction: row; justify-content: space-between; align-self: auto; align-content: auto; align-items: auto; flex-wrap: nowrap;">
-            <ui:Image source="project://database/Assets/Sprites/diamond-suits/ace-of-diamonds.aseprite?fileID=4718461631411670515&amp;guid=b9f9c0aef11000f48aa7b7e00e12152c&amp;type=3#ace-of-diamonds" name="Dealer-Card-One" style="width: 50%; height: 100%;"/>
-            <ui:Image source="project://database/Assets/Sprites/diamond-suits/two-of-diamonds.aseprite?fileID=-1162472160999519657&amp;guid=2c0059e95683a9d44a729fd17ef056a7&amp;type=3#two-of-diamonds" name="Dealer-Card-Two" style="width: 50%; height: 100%;"/>
+            <ui:Image source="project://database/Assets/Sprites/diamond-suits/Diamonds/ace-of-diamonds.aseprite?fileID=727460965896342719&amp;guid=413319e8212599b4e93f3822695eda4d&amp;type=3#ace-of-diamonds" name="Dealer-Card-One" style="width: 50%; height: 100%;"/>
+            <ui:Image source="project://database/Assets/Sprites/diamond-suits/Diamonds/king-of-diamonds.aseprite?fileID=-4202005402415400262&amp;guid=310fa43d4ccd5024bb85767e309eda0b&amp;type=3#king-of-diamonds" name="Dealer-Card-Two" style="width: 50%; height: 100%;"/>
         </ui:VisualElement>
         <ui:VisualElement name="Player-Hand" style="flex-grow: 1; flex-direction: row;">
-            <ui:Image source="project://database/Assets/Sprites/diamond-suits/ace-of-diamonds.aseprite?fileID=4718461631411670515&amp;guid=b9f9c0aef11000f48aa7b7e00e12152c&amp;type=3#ace-of-diamonds" name="Player-Card-One" style="width: 50%; height: 100%;"/>
-            <ui:Image source="project://database/Assets/Sprites/diamond-suits/two-of-diamonds.aseprite?fileID=-1162472160999519657&amp;guid=2c0059e95683a9d44a729fd17ef056a7&amp;type=3#two-of-diamonds" name="Player-Card-Two" style="width: 50%; height: 100%;"/>
+            <ui:Image source="project://database/Assets/Sprites/diamond-suits/Hearts/ace-of-hearts.aseprite?fileID=-4629002842535093331&amp;guid=8dba47b4a396258449fdcc13cd660809&amp;type=3#ace-of-hearts" name="Player-Card-One" style="width: 50%; height: 100%;"/>
+            <ui:Image source="project://database/Assets/Sprites/diamond-suits/Hearts/king-of-hearts.aseprite?fileID=-878177337972197673&amp;guid=f08f48613a4ae404282f1f945ddb21e5&amp;type=3#king-of-hearts" name="Player-Card-Two" style="width: 50%; height: 100%;"/>
         </ui:VisualElement>
         <ui:Button text="Randomizer" name="Randomizer" style="align-self: center; top: auto; width: 350px; height: 200px; font-size: 50px; -unity-font-style: bold;"/>
     </ui:VisualElement>

@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b9baa7bb16acd4586e9b3302738c32, type: 3}
   m_Name: two-of-diamonds
   m_EditorClassIdentifier: Assembly-CSharp::CardValue
-  cardValue: 0
+  cardSprite: {fileID: -4520882357924635908, guid: c1053e99563bc624094144cede3de769, type: 3}
+  cardValue: 2
