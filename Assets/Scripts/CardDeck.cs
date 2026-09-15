@@ -47,8 +47,8 @@ public class CardDeck : MonoBehaviour
         VisualElement buttons = root.Q<VisualElement>("Buttons");
 
         givenCards.Add(playerHand.Q<Image>("Player-Card-One"));
-        givenCards.Add(playerHand.Q<Image>("Player-Card-Two"));
         givenCards.Add(dealerHand.Q<Image>("Dealer-Card-One"));
+        givenCards.Add(playerHand.Q<Image>("Player-Card-Two"));
         givenCards.Add(dealerHand.Q<Image>("Dealer-Card-Two"));
 
         dealCard = buttons.Q<Button>("Play");
