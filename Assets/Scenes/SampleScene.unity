@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 512013536}
   - component: {fileID: 512013535}
   - component: {fileID: 512013537}
+  - component: {fileID: 512013538}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -189,6 +190,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArrayTesting
   deckOfCards: []
   discardedCards: []
+--- !u!114 &512013538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512013534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b06d581ead8cac42bf405209f8ba412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardDeck
+  cards: []
+  suitOfDiamonds:
+  - {fileID: 11400000, guid: 395b84410afab3f46b30485c364d48d4, type: 2}
+  - {fileID: 11400000, guid: 2d402065215937c4caa8211d512191ae, type: 2}
+  - {fileID: 11400000, guid: 233b2b0d785d8874c927886c1c002b35, type: 2}
+  - {fileID: 11400000, guid: a431477f014adca44abcd44ad487f6da, type: 2}
+  - {fileID: 11400000, guid: c3e37607ce02a97449f44c38091977d5, type: 2}
+  - {fileID: 11400000, guid: e48e57eb23a11e143a9d1bb61dc685ba, type: 2}
+  - {fileID: 11400000, guid: 35039705da00f3c49b004f320567856a, type: 2}
+  - {fileID: 11400000, guid: 7c84927286a666b4ebe1a8447cebeec3, type: 2}
+  - {fileID: 11400000, guid: b4c07c3d016558a4f88c47a7e17262d6, type: 2}
+  - {fileID: 11400000, guid: 52cf6a27ee20c3a4ea867fe3856419ae, type: 2}
+  - {fileID: 11400000, guid: f0124ee070f7c0c4aa35a728bef0e04f, type: 2}
+  - {fileID: 11400000, guid: 3ec143177aa55be46b8bf4d0358e4569, type: 2}
+  - {fileID: 11400000, guid: 445f19754a294394c9f4ad71758704a0, type: 2}
+  suitOfHearts:
+  - {fileID: 11400000, guid: 2fd5c2e3773aaaa45b778eed08f72b48, type: 2}
+  - {fileID: 11400000, guid: c4706b10f233aa54eb82ecc4352fd618, type: 2}
+  - {fileID: 11400000, guid: 61d1af352a2791f479d7df3371dd71fa, type: 2}
+  - {fileID: 11400000, guid: 1bdb555c4b6e770459d621e035880a27, type: 2}
+  - {fileID: 11400000, guid: eeaa4f2b059a5204680fd7ca030d3d4a, type: 2}
+  - {fileID: 11400000, guid: 45546f241cb0b4543a8bf14f06d5b336, type: 2}
+  - {fileID: 11400000, guid: 0d117c6f70227fb418195187db74d2dd, type: 2}
+  - {fileID: 11400000, guid: 4f612261072dc4b419c9da811be8dfeb, type: 2}
+  - {fileID: 11400000, guid: 6bbddd3208336d94ea6fae21adab3a4c, type: 2}
+  - {fileID: 11400000, guid: 5dbbc5a8708cafc44aeb5d0e356e6251, type: 2}
+  - {fileID: 11400000, guid: d4ae9b8ec73ff3c4abb55e9c4a46276f, type: 2}
+  - {fileID: 11400000, guid: 2b86e07c67b5aa749aa3b535f070820e, type: 2}
+  - {fileID: 11400000, guid: 652c40a00beb55242b8df69fc8e0deb8, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

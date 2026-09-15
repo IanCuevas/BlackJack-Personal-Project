@@ -5,16 +5,7 @@ using System;
 using UnityEngine.UIElements;
 using System.Collections;
 
-// Randomizer Code
-// Analyze code later
-public static class CollectionExtensions
-{
-    public static IEnumerable<T> Randomize<T>(this IEnumerable<T> source)
-    {
-        System.Random rnd = new System.Random();
-        return source.OrderBy(_ => rnd.Next());
-    }
-}
+
 
 public class ArrayTesting : MonoBehaviour
 {
@@ -86,6 +77,7 @@ public class ArrayTesting : MonoBehaviour
 
     public void DealCards()
     {
+
         if (deckOfCards.Count == 0)
         {
             deckOfCards.AddRange(discardedCards);
