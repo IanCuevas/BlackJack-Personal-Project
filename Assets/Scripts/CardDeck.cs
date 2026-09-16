@@ -39,6 +39,8 @@ public class CardDeck : MonoBehaviour
 
     int shoeDeck = 4;
 
+    int playerValue, dealerValue;
+
     private void OnEnable()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -117,6 +119,22 @@ public class CardDeck : MonoBehaviour
 
             yield return new WaitForSeconds(delay);
         }
+
+        playerValue = currentCards[0].cardValue + currentCards[2].cardValue;
+        dealerValue = currentCards[1].cardValue + currentCards[3].cardValue;
+
+        print($"Player Value: { playerValue }");
+        print($"Dealer Value: { dealerValue }");
+
+        if (playerValue > dealerValue)
+        {
+            print("Player Wins!");
+        }
+        else
+        {
+            print("Dealer Wins :(");
+        }
+
     }
 
     IEnumerator RemoveCardValues(int indexCard)

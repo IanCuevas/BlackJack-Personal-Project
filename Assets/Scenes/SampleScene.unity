@@ -183,7 +183,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512013534}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d12440068a1985489b6ece049519ae7, type: 3}
   m_Name: 
@@ -202,7 +202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b06d581ead8cac42bf405209f8ba412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardDeck
-  cards: []
+  cardDeck: []
+  currentCards: []
+  discardedDeck: []
   suitOfDiamonds:
   - {fileID: 11400000, guid: 395b84410afab3f46b30485c364d48d4, type: 2}
   - {fileID: 11400000, guid: 2d402065215937c4caa8211d512191ae, type: 2}
