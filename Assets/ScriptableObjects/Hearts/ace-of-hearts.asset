@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CardValue
   cardSprite: {fileID: -4629002842535093331, guid: 8dba47b4a396258449fdcc13cd660809, type: 3}
   cardValue: 1
+  isAce: 1

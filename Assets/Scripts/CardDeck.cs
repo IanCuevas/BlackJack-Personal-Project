@@ -92,6 +92,7 @@ public class CardDeck : MonoBehaviour
         if (cardDeck.Count == 0)
         {
             cardDeck.AddRange(discardedDeck);
+            cardDeck.Randomize().ToList();
             discardedDeck.Clear();
         }
     }
@@ -120,15 +121,31 @@ public class CardDeck : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
-        playerValue = currentCards[0].cardValue + currentCards[2].cardValue;
-        dealerValue = currentCards[1].cardValue + currentCards[3].cardValue;
 
-        print($"Player Value: { playerValue }");
-        print($"Dealer Value: { dealerValue }");
+        if((currentCards[0].isAce == true || currentCards[2].isAce == true) && (currentCards[0].cardValue <= 10 || currentCards[2].cardValue <=10))
+        {
+            playerValue = currentCards[0].cardValue + currentCards[2].cardValue + 10;
+        }
+        if((currentCards[1].isAce == true || currentCards[3].isAce == true) && (currentCards[1].cardValue <= 10 || currentCards[3].cardValue <=10))
+        {
+            dealerValue = currentCards[1].cardValue + currentCards[3].cardValue + 10;
+        }
+        else
+        {
+            playerValue = currentCards[0].cardValue + currentCards[2].cardValue;
+            dealerValue = currentCards[1].cardValue + currentCards[3].cardValue;
+        }
 
+
+        print($"Player: {playerValue}");
+        print($"Dealer: {dealerValue}");
         if (playerValue > dealerValue)
         {
             print("Player Wins!");
+        }
+        else if (playerValue == dealerValue)
+        {
+            print("It's A Tie!");
         }
         else
         {

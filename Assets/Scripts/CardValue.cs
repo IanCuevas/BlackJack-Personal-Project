@@ -6,4 +6,5 @@ public class CardValue : ScriptableObject
 {
     public Sprite cardSprite;
     public int cardValue;
+    public bool isAce;
 }

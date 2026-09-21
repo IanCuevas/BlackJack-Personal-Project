@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: queen-of-diamonds
   m_EditorClassIdentifier: Assembly-CSharp::CardValue
   cardSprite: {fileID: -4408892917523050639, guid: e1a5c59cc87b8114eaabfe3a068de3d8, type: 3}
-  cardValue: 9
+  cardValue: 10
+  isAce: 0
